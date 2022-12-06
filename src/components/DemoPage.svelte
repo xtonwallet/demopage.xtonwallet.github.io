@@ -475,7 +475,7 @@
   </div>
   <div class="nav-center">
     <h4 class="text-center">
-      Demo page to test a browser wallet extension on TEPs-100 compatibility
+      Demo page to test a browser wallet extension on TON blockchain Web3 compatibility
     </h4>
   </div>
   <div class="nav-right"></div>
