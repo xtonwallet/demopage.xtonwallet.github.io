@@ -303,10 +303,13 @@
         params: {
           name: document.getElementById("wallet_watchAsset_name").value,
           symbol: document.getElementById("wallet_watchAsset_symbol").value,
+          description: document.getElementById("wallet_watchAsset_description").value,
+          externalLink: document.getElementById("wallet_watchAsset_externalLink").value,
           decimals: Number(document.getElementById("wallet_watchAsset_decimals").value).valueOf(),
           address: document.getElementById("wallet_watchAsset_address").value,
           icon: document.getElementById("wallet_watchAsset_icon").value,
           type: document.getElementById("wallet_watchAsset_type").value,
+          itemIndex: document.getElementById("wallet_watchAsset_itemIndex").value
         },
       })
       .then((result) => {
@@ -717,6 +720,15 @@
             </Field>
             <Field label="Symbol">
               <Input id="wallet_watchAsset_symbol" />
+            </Field>
+            <Field label="Description">
+              <Input id="wallet_watchAsset_description" />
+            </Field>
+            <Field label="External link">
+              <Input id="wallet_watchAsset_externalLink" />
+            </Field>
+            <Field label="Item index">
+              <Input id="wallet_watchAsset_itemIndex" />
             </Field>
             <Field label="Decimals">
               <Input id="wallet_watchAsset_decimals" type="number" />
