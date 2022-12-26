@@ -1,8 +1,8 @@
 {
-  "name": "tep100-demopage",
+  "name": "tep105-demopage",
   "version": "1.0.0",
-  "description": "Demo page for testing TEPs-100 standard.",
-  "author": "My TON wallet team <askme@mytonwallet.com>",
+  "description": "Demo page for testing TEPs-105 standard.",
+  "author": "My TON wallet team <askme@xtonwallet.com>",
   "license": "Apache-2.0",
   "scripts": {
     "lint": "eslint . --ext .svelte --ext .js --fix",
