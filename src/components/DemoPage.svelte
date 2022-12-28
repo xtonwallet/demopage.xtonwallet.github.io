@@ -1,9 +1,10 @@
 <script>
   import "./Styles.svelte";
+  import { beforeUpdate } from "svelte";
   import { Container, Input, Field, Details, Row, Col, Button } from "svelte-chota";
   import Loading from "./Loading.svelte";
 
-  export let loaded;
+  export let loaded; 
 
   const allPermissions = [
     "ton_account",
@@ -19,6 +20,13 @@
     "ton_decryptMessage",
     "wallet_watchAsset",
   ];
+
+  let noWallet = true;
+  beforeUpdate(() => {
+    if (typeof window.ton != "undefined" && window.ton.isTEPs105) {
+      noWallet = false;
+    }
+  });
 
   const wallet_getSdkVersion = (event) => {
     const wallet_getSdkVersion_output = document.getElementById(
@@ -487,6 +495,15 @@
 <div class="container">
   {#if $loaded}
     <div class="main-container">
+      <Row>
+        <Col>
+          {#if noWallet == true}
+            <h5 class="text-center">
+              <b>We cannot detect that your browser has a compatible web extension. You can install it from <a href="https://docs.xtonwallet.com/installation" target="_blank" rel="noopener noreferrer">here</a>.</b> 
+            </h5>
+          {/if}
+        </Col>
+      </Row>
       <Row>
         <Col class="container_methods">
 
